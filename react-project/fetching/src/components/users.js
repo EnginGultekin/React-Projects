@@ -11,7 +11,7 @@ function Users() {
         //     .then((res) => res.json())
         //     .then((data) => setUsers(data))
         axios('https://jsonplaceholder.typicode.com/users')
-            .then((res) => setUsers(res.data))
+            .then((res) => setUsers(res.user))
             .catch(e => console.log(e))
             .finally(() => setIsLoading(false))
     }, [])
